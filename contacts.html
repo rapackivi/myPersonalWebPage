@@ -16,10 +16,16 @@
     </ul>
     <hr>
     <p>At least I did it! Use the form below to contact me!</p>
-    <form action="index.html" method="POST" autocomplete="on">
-        <label for="">you can send me your message by this form</label>
+    <form action="mailto:localit1981@gmail.com" method="POST" autocomplete="on" enctype="text/plain">
+        <label for="userName">your name</label>
+        <input type="text" name="userName" id="">
         <br>
-        <input type="textarea" >
+        <label for="">your email</label>
+        <input type="email" name="email">
+        <br>
+        <label for="message">your message</label>
+        <br>
+        <textarea name="message" id="" cols="30" rows="10"></textarea>
         <br>
         <input type="submit">
     </form>
