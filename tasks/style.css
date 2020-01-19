@@ -1,0 +1,28 @@
+div {
+    width: 200px;
+    height: 200px;
+}
+
+.top-container {
+    background-color: aqua;
+    border: solid 10px;
+    padding: 20px;
+    width: 140px;
+    height: 140px;
+}
+
+.middle-container {
+    background-color: red;
+    border: solid 20px;
+    width: 160px;
+    height: 160px;
+    margin-left: 200px;
+}
+
+.bottom-container {
+    background-color: yellow;
+    border: solid 10px;
+    width: 180px;
+    height: 180px;
+    margin-left: 400px;
+}
