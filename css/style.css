@@ -13,3 +13,7 @@ hr {
     width: 25%;
     border-width: 5px;
 }
+
+p {
+    margin: 5px;
+}
