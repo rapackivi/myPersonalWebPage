@@ -1,0 +1,32 @@
+h1 {
+    color : red
+}
+p {
+    background: rosybrown;
+}
+
+img:hover {
+    background-color: gold;
+}
+
+.bacon {
+    background-color: green;
+}
+
+.broccoli {
+    background-color: red;
+}
+
+.top-container {
+    background-color: #E4F9F5;
+}
+.bottom-container {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+}
+.middle-container {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+}
