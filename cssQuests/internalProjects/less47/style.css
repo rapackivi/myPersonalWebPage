@@ -5,27 +5,26 @@ div {
     /* border-radius:100%; */
     /* border: solid 1px; */
     /* margin:10px 0px -10px 10px; */
-    position: relative;
-    display: inline-block;
+    position: absolute;
+    
   }
 
   .red {
     background-color:red;
     left: 200px;
+    top: 200px;
+    
   }
   .blue {
     background-color:blue;
-    right: 104px;
+    left: 100px;
+    top:100px;
+    
   }
   .yellow {
     background-color:yellow;
-    right: 108px;
+    left: 0;
+    top: 0;
   }
 
-  .bottom {
-    display: block;
-    background-color: black;
-    width: 300px;  
-    /* border: solid ; */
-      /* border-width: 1px 10px 10px 10px; */
-  }
+  
