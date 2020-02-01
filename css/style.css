@@ -1,10 +1,13 @@
 
 body {
     background-color: #EAF6F6;
+    text-align: center;
 }
 
 h1 {
-    color : rgb(156, 228, 228)
+    color : rgb(156, 228, 228);
+    font-family: "Sacramento";
+    font-size: 5.2em;
 }
 hr {
     background-color: inherit;
@@ -18,6 +21,15 @@ p {
     margin: 5px;
 }
 
-img {
-    display: block;
+table {
+    margin: 0 auto 0 auto;
 }
+
+.top-cloud{
+    position: relative;
+    left:17%;
+}
+.bottom-cloud{
+    position: absolute;
+}
+
