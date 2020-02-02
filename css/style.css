@@ -1,6 +1,6 @@
 
 body {
-    background-color: #EAF6F6;
+    margin:0;
     text-align: center;
 }
 
@@ -8,7 +8,7 @@ h1 {
     color : #66BFBF;
     font-family: "Sacramento";
     font-size: 5.2em;
-    line-height: 2;
+    margin-bottom:20px;
 }
 
 h2 {
@@ -50,6 +50,93 @@ span {
 
 .skill-row {
    width: 50%;
-   margin:0 auto 0 auto;
+   margin:50px auto;
+   
 }
+.skill-row img{
+    width: 25%;
+ }
+
+ .left_img {
+    float: left;
+    margin-right: 30px;
+ }
+
+.right_img {
+    float: right;
+    margin-left: 30px;
+ }
+
+.skill-row p {
+    line-height: 2;
+    text-align: left;
+}
+
+.top-container{
+    background-color: #EAF6F6;
+}
+.greeting, .experience, .skills, .contact-me{
+    margin-bottom: 30px;
+}
+
+.middle-container{
+    margin-top:30px;
+    background-color: white;
+}
+
+.bottom-container{
+    background-color: #66BFBF;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-top:30px
+}
+
+.copyright{
+    color: #EAF6F6;
+    font-size: 0.8rem;
+    margin:0;
+}
+.footer-link{
+    margin: 30px ;
+}
+
+.btn {
+    margin: 30px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background-color:#66BFBF;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:0;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:65px;
+	line-height:65px;
+	width:131px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #cc9f52;
+}.btn:hover {
+	background-color:#fb9e25;
+}.btn:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
 
