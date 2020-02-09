@@ -223,6 +223,8 @@ main {
 
 .scores {
   padding-top: 1em;
+  width:90%;
+  margin: auto;
 }
 
 .scores__table {
@@ -270,6 +272,8 @@ main {
 
 .weather {
   padding: 1em;
+  width:95%;
+  margin:auto;
 }
 
 .weather__location {
@@ -334,7 +338,7 @@ main {
 
 .snippet__thumbnail {
   width: 100px;
-  
+  float:left;
   margin-right: 1em;
 }
 

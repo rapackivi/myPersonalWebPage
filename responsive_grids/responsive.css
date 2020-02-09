@@ -6,18 +6,34 @@
 }
 
 @media screen and (min-width:550px){
-    .top-news, .weather  {
+    .hero {
         width:50%;
-        order:0;
+        background-size: cover;
+    }    
+    .top-news {
+        width:50%;
     }
-
     .scores {
-        width:50%;
-        order:-1;
+        width:60%;
+    }
+    .weather{
+        width:40%;
     }
 
-     .recent-news {
-        width:50%;
-        order:1;
+    .description{
+        height: 50%;
+    }
+}
+
+@media screen and (min-width:850px){
+    .top-news, .scores, .hero {
+        width:33%;
+    }
+
+    .weather{
+        width:25%;
+    }
+    .recent-news {
+        width:75%;
     }
 }
