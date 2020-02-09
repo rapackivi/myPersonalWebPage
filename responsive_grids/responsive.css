@@ -1,0 +1,23 @@
+.content {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+@media screen and (min-width:550px){
+    .top-news, .weather  {
+        width:50%;
+        order:0;
+    }
+
+    .scores {
+        width:50%;
+        order:-1;
+    }
+
+     .recent-news {
+        width:50%;
+        order:1;
+    }
+}
