@@ -1,0 +1,128 @@
+.mockup {
+	position: absolute;
+	width: 100%;
+	z-index: 0;
+}
+
+.mockup2{
+	position:absolute;
+	width:98%;
+	top:388px;
+	margin: 0;
+	z-index: 1;
+	opacity: 50%;
+}
+
+body{
+	font-family: 'Montserrat';
+
+}
+
+h1 {
+	font-size : 3.0rem;
+	line-height : 1.5;
+	font-weight: 800;
+	padding-top: 20px;
+}
+h2 {
+	font-weight: 700;
+	line-height: 1.5;
+	font-size: 3rem;
+}
+h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.container-fluid {
+	padding: 35px 185px 12px 185px;
+}
+
+#title {
+	background-color: #ff4c68;
+	color: white;
+	font-size: 1.5rem;
+}
+
+/* navbar */
+.navbar-brand{
+	font-size: 2.3rem;
+	font-family: 'Ubuntu';
+	font-weight: 800;
+	text-align: left;
+}
+.navbar{
+	padding: 0;
+	margin-bottom: 5%;
+}
+.navbar a{
+	color:#fff;
+}
+.nav-item{
+	padding: 0px 10px 0px 20px;
+}
+.nav-item .nav-link{
+	font-size: 1.1rem;
+	font-weight: 100;
+	color:#fff;
+}
+.download-button{
+	margin: 20px 3% 5% 0;
+	font-size: 1rem;
+}
+.col-lg-6 img{
+	transform: rotate(25deg);
+	width:60%;
+	margin-top:15px;
+	margin-left:0px;
+}
+/* feature section */
+/* #features{
+	margin:50px 195px 50px 175px;
+	line-height: 3;
+}
+.feature-elem{
+	text-align: center;
+	height: 33%;
+}
+.feature-elem h3 {
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #8f8f8f;
+}
+.feature-elem p {
+	font-size: 0.8rem;
+	padding: 0 30px;
+	line-height: 1.5;
+	color: #8f8f8f;
+}
+.feature-elem i {
+	font-size: 3.4rem;
+	color: #ef8172;
+} */
+#features{
+	padding: 7% 15%;
+}
+.feature-elem{
+	text-align: center;
+	padding: 4.5px;
+}
+.icon {
+	font-size: 3.4rem;
+	color: #ef8172;
+	margin-bottom: 1rem;
+}
+.icon:hover{
+	color: #ff4c68;
+}
+#testimonials{
+	padding: 7% 15%;
+	text-align: center;
+	background-color: #ef8172;
+	color: #fff;
+}
+#testimonials img {
+	width: 10%;
+	border-radius:100%;
+	margin: 20px;
+}
