@@ -115,8 +115,9 @@ h3 {
 .icon:hover{
 	color: #ff4c68;
 }
+
+/* testimonials */
 #testimonials{
-	padding: 7% 15%;
 	text-align: center;
 	background-color: #ef8172;
 	color: #fff;
@@ -125,4 +126,31 @@ h3 {
 	width: 10%;
 	border-radius:100%;
 	margin: 20px;
+}
+/* press */
+#press{
+	background-color: #ef8172;
+	color: #fff;
+	text-align: center;
+	padding-bottom: 3%;
+}
+
+#press img {
+	width: 15%;
+	margin: 20px 30px 50px;
+}
+.carousel-inner {
+	padding: 7% 15%;
+}
+.carousel-inner a {
+	color: #fff ;
+}
+
+/* pricing */
+#pricing{
+	padding: 10%;
+}
+.card {
+	text-align: center;
+	margin: 5%;
 }
