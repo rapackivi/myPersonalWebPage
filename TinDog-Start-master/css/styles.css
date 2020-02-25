@@ -15,33 +15,32 @@
 
 body{
 	font-family: 'Montserrat';
-
+	text-align: center;
 }
 
-h1 {
-	font-size : 3.0rem;
+h1,h2,h3 {
 	line-height : 1.5;
-	font-weight: 800;
-	padding-top: 20px;
-}
-h2 {
 	font-weight: 700;
-	line-height: 1.5;
-	font-size: 3rem;
+}
+h1,h2 {
+	font-size : 3.0rem;
+}
+h1 {
+	padding-top: 20px;
 }
 h3 {
 	font-size: 1.5rem;
-	font-weight: bold;
 }
 
-.container-fluid {
-	padding: 35px 185px 12px 185px;
+.container {
+	padding : 7% 15%;
 }
-
 #title {
+	padding: 35px 185px 0px 185px;
 	background-color: #ff4c68;
 	color: white;
 	font-size: 1.5rem;
+	text-align: left;
 }
 
 /* navbar */
@@ -74,14 +73,15 @@ h3 {
 	transform: rotate(25deg);
 	width:60%;
 	margin-top:15px;
-	margin-left:0px;
+	margin-left:50px;
+	position : absolute;
 }
 
 #features{
 	padding: 7% 15%;
 	position: relative;
 	background: #fff;
-	
+
 }
 .feature-elem{
 	text-align: center;
@@ -128,7 +128,7 @@ h3 {
 
 /* pricing */
 #pricing{
-	padding: 10%;
+	padding: 7% 15%;
 }
 .card {
 	text-align: center;
@@ -139,28 +139,30 @@ h3 {
 	background: #ff4c68;
 	text-align: center;
 	color: #fff;
-	
 	padding: 7% 15%;
-}
-#cta h3 {
-	font-weight: 900;
-	font-size: 3rem;
-	padding-bottom:5%;
-}
-#cta button {
-	margin:2%;
 }
 
 #footer {
-	text-align: center;
+
+	margin: 50px auto;
+	line-height: 2.5;
+	color: black;
+}
+#footer .links a {
+	margin: 5px;
+	color: black;
 }
 
-@media screen and (max-width:1100px){
+@media screen and (max-width:980px){
+	.container-fluid {
+		padding: 35px 85px 12px 85px;
+	}
 	#title {
 		text-align: center;
 	}
 	.title-image{
-		/* position: static; */
+		position: static;
 		transform: rotate(0);
+		width: 50%
 	}
 }
