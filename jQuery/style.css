@@ -1,0 +1,22 @@
+body {
+    background: green;
+}
+
+.big-fat {
+    font-size: 4rem;
+    font-style: italic;
+}
+
+.square {
+    position: absolute;
+    top:100px;
+    left:100px;
+    width: 100px;
+    height: 100px;
+    background: blue;
+}
+
+.square-top-left {
+    
+}
+
