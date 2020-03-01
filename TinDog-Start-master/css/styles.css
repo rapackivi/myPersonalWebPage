@@ -15,33 +15,32 @@
 
 body{
 	font-family: 'Montserrat';
-
+	text-align: center;
 }
 
-h1 {
-	font-size : 3.0rem;
+h1,h2,h3 {
 	line-height : 1.5;
-	font-weight: 800;
-	padding-top: 20px;
-}
-h2 {
 	font-weight: 700;
-	line-height: 1.5;
-	font-size: 3rem;
+}
+h1,h2 {
+	font-size : 3.0rem;
+}
+h1 {
+	padding-top: 20px;
 }
 h3 {
 	font-size: 1.5rem;
-	font-weight: bold;
 }
 
-.container-fluid {
-	padding: 35px 185px 12px 185px;
+.container {
+	padding : 7% 15%;
 }
-
 #title {
+	padding: 35px 185px 0px 185px;
 	background-color: #ff4c68;
 	color: white;
 	font-size: 1.5rem;
+	text-align: left;
 }
 
 /* navbar */
@@ -70,38 +69,19 @@ h3 {
 	margin: 20px 3% 5% 0;
 	font-size: 1rem;
 }
-.col-lg-6 img{
+.title-image{
 	transform: rotate(25deg);
 	width:60%;
 	margin-top:15px;
-	margin-left:0px;
+	margin-left:50px;
+	position : absolute;
 }
-/* feature section */
-/* #features{
-	margin:50px 195px 50px 175px;
-	line-height: 3;
-}
-.feature-elem{
-	text-align: center;
-	height: 33%;
-}
-.feature-elem h3 {
-	font-size: 1.2rem;
-	font-weight: 700;
-	color: #8f8f8f;
-}
-.feature-elem p {
-	font-size: 0.8rem;
-	padding: 0 30px;
-	line-height: 1.5;
-	color: #8f8f8f;
-}
-.feature-elem i {
-	font-size: 3.4rem;
-	color: #ef8172;
-} */
+
 #features{
 	padding: 7% 15%;
+	position: relative;
+	background: #fff;
+
 }
 .feature-elem{
 	text-align: center;
@@ -148,9 +128,41 @@ h3 {
 
 /* pricing */
 #pricing{
-	padding: 10%;
+	padding: 7% 15%;
 }
 .card {
 	text-align: center;
 	margin: 5%;
+}
+
+#cta{
+	background: #ff4c68;
+	text-align: center;
+	color: #fff;
+	padding: 7% 15%;
+}
+
+#footer {
+
+	margin: 50px auto;
+	line-height: 2.5;
+	color: black;
+}
+#footer .links a {
+	margin: 5px;
+	color: black;
+}
+
+@media screen and (max-width:980px){
+	.container-fluid {
+		padding: 35px 85px 12px 85px;
+	}
+	#title {
+		text-align: center;
+	}
+	.title-image{
+		position: static;
+		transform: rotate(0);
+		width: 50%
+	}
 }
