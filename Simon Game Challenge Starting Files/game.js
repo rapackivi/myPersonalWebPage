@@ -11,8 +11,13 @@ function nextSequence(){
     var btnAudio = new Audio("./sounds/"+ randomChosenColor + ".mp3");
     btnAudio.play();
 <<<<<<< HEAD
+<<<<<<< HEAD
     $("h1").text("level "+level);
     level++;
+=======
+    level++;
+    $("h1").text("level " + level);
+>>>>>>> c9a23881b8a66de78999dd4dfe2141e63cbb1e68
 =======
     level++;
     $("h1").text("level " + level);
@@ -21,6 +26,7 @@ function nextSequence(){
 
 function checkAnswer(currentLevel){
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -33,6 +39,15 @@ $(".btn").on("click",function(event){
 <<<<<<< HEAD
     
 =======
+    if (justStarted){
+        return;
+    }
+>>>>>>> c9a23881b8a66de78999dd4dfe2141e63cbb1e68
+=======
+var justStarted = true;
+//make our buttons to be live!
+var lastAnswerIndex = 0;
+$(".btn").on("click",function(event){
     if (justStarted){
         return;
     }
@@ -63,8 +78,12 @@ $(".btn").on("click",function(event){
 })
 ///////////////////////////////////////
 <<<<<<< HEAD
+<<<<<<< HEAD
 var justStarted = true;
 var level = 0;
+=======
+
+>>>>>>> c9a23881b8a66de78999dd4dfe2141e63cbb1e68
 =======
 
 >>>>>>> c9a23881b8a66de78999dd4dfe2141e63cbb1e68
