@@ -1,0 +1,14 @@
+{
+  "name": "webapi_learn",
+  "version": "1.0.0",
+  "description": "learn web API on example weather api",
+  "main": "apiLearn.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexey Semenihin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
