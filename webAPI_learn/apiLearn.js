@@ -1,17 +1,15 @@
 const express = require("express");
 const https = require("https");
-
 const app = express();
 
-const body = "https://api.openweathermap.org/data/2.5/weather?";
-const city = "q=Kharkiv";
-const units = "units=metric";
-const apiKey = "appid=11ec3a36143b9e3072bedd062674c8ef";
+const city = "Kharkiv";
+const units = "metric";
+const apiKey = "11ec3a36143b9e3072bedd062674c8ef";
 const conditionCode = "http://openweathermap.org/img/wn/";
 const conditionCode2 = "@2x.png";
+const url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=" + units + "&appid=" + apiKey;
 
 app.get("/hello", function(req,res){
-    url = body + city + "&" + units + "&" + apiKey;
     https.get(url, function(response){
         console.log(response.statusCode);
         response.on("data", function(data){
@@ -25,13 +23,11 @@ app.get("/hello", function(req,res){
             res.send();
         })
     })
-   
-    
 })
 
 
-app.get("/popa", function(req,res){
-    res.send(";жопой чуяла что жопа");
+app.get("/", function(req,res){
+    res.sendFile(";жопой чуяла что жопа");
 })
 
 
