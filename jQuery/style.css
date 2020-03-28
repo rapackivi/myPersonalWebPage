@@ -19,7 +19,7 @@ body {
 #gameboard{
     background: blue;
     border: solid blue;
-  
+    width: 100%;
 }
 
 .square {
