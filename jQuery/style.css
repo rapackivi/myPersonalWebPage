@@ -1,10 +1,25 @@
 body {
-    background: green;
+    background: black;
+    text-align: center;
+}
+.element {
+    padding:10px;
+    background: white;
+   border: solid black;
+   border-radius: 10%;
 }
 
-.big-fat {
-    font-size: 4rem;
-    font-style: italic;
+.game-type {
+    
+}
+
+.gameField{
+    margin: 5%;
+}
+#gameboard{
+    background: blue;
+    border: solid blue;
+  
 }
 
 .square {
@@ -14,9 +29,5 @@ body {
     width: 100px;
     height: 100px;
     background: blue;
-}
-
-.square-top-left {
-    
 }
 

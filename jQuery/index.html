@@ -5,19 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>jQuery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
-    <h1 class="title">Hello, blyady!</h1>
-    <a href="https://google.com">search</a>
-    <button>Ok</button>
-    <button>Ok</button>
-    <button>Ok</button>
-    <button>Ok</button>
-    <button>Ok</button>
-    <input type="text" class="myField">
-    <div class="square"></div>
+    <div class="row">
+
+        <div class="col-3">
+            <div class="game-type element">A-Type</div>
+            <div class="statistics element">Statistics:
+                <ul>
+                    <li>0</li>
+                    <li>0</li>
+                    <li>0</li>
+                    <li>0</li>
+                    <li>0</li>
+                    <li>0</li>
+                    <li>0</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="line-count element">lines - 0</div>
+            <div class="gameField">
+                <canvas id="gameboard" width="240" height="400" />
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div id = "score" class="scores element">
+                Top-score: 100000 
+                <br>
+                Score: 0</div>
+            <div class="next-figure-panel element">
+                Next:
+                <br>
+                <div class="next-figure"></div>
+            </div>
+            <div class="round-count element">Round:01</div>
+        </div>
+        
+    </div>
     <script
         src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
