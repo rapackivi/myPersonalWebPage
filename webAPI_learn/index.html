@@ -7,7 +7,16 @@
     <title>Weather in your region</title>
 </head>
 <body>
-    <label for="cityInput"></label>
-    <input id="cityInput" type="text" name="cityName">
+    <form action="/" method="POST">
+        <label for="cityInput">City name:</label>
+        <input id="cityInput" type="text" name="cityName" placeholder="type name of town here">
+        <button type="submit" >GO!</button>   
+        <!-- install fucking body-parser!   npm i body-parser-->
+        <select name="ukraineCity">
+            <option>Kiev</option>
+            <option>Kharkiv</option> 
+            <option>Lviv</option> 
+        </select>
+    </form>
 </body>
 </html>
