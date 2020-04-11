@@ -3,8 +3,18 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+app.set("view enjine", "ejs");
+
+
+
 app.get("/", (req, res)=>{
-    res.send("Otdohnite!");
+    const today = new Date();
+    const day = today.getDay();
+    if (day ===6 || day === 0){
+        res.send("Otdohnite!");
+    }else {
+        res.send("nado porabotaty!")
+    }
 })
 
 
