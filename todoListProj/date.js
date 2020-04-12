@@ -1,6 +1,5 @@
-function getDate(){
-        const listOfDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-    var options = {
+exports.getDate = () => {
+    const options = {
         weekday : "long",
         day : "numeric",
         month : "long"
@@ -9,20 +8,16 @@ function getDate(){
     const today = new Date();
     const todayStr = today.toLocaleDateString("en-US", options)
     const day = today.getDay();
-    var ret = [];
+    const ret = [];
     ret.push(todayStr,day)
     return ret;
 }
 
-function getDay(){
+exports.getDay = () =>{
     const today = new Date();
-    var options = {
+    const options = {
         weekday : "long"
     };
     const todayStr = today.toLocaleDateString("en-US", options)
     return todayStr;
-}
-
-module.exports.getDate = getDate;
-
-module.exports.getDay = getDay;
+};
