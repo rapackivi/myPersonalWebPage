@@ -1,5 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const dateUtil = require(__dirname+"/date.js");
+
 
 const app = express();
 
@@ -13,35 +15,15 @@ let workItems = ["pass EJS tutorial", "check Test.io", "test uTest.com"]
 
 
 // ===========COMMON=================
-const listOfDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-    var options = {
-        weekday : "long",
-        day : "numeric",
-        month : "long"
-    };
-
-    const today = new Date();
-    const todayStr = today.toLocaleDateString("en-US", options)
-    const day = today.getDay();
+let [todayStr, day] = dateUtil.getDate();
 // ==================================== 
 
 app.get("/", (req, res)=>{
-    
-    res.render("list", { listTitle: "main", nameDay:listOfDays[day] , weekday: day%6 , date : todayStr, addedTasks : items });
+    res.render("list", { listTitle: "main",  weekday: day%6 , date : todayStr, addedTasks : items });
 })
 
 app.get("/work", (req, res)=>{
-    const listOfDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-    var options = {
-        weekday : "long",
-        day : "numeric",
-        month : "long"
-    };
-
-    const today = new Date();
-    const todayStr = today.toLocaleDateString("en-US", options)
-    const day = today.getDay();
-    res.render("list", { listTitle: "work", nameDay:listOfDays[day] , weekday: day%6 , date : todayStr, addedTasks : workItems });
+    res.render("list", { listTitle: "work",  weekday: day%6 , date : todayStr, addedTasks : workItems });
 })
 
 app.post("/", (req,res)=>{
