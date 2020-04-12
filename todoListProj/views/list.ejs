@@ -1,15 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO list</title>
-</head>
-<body>
-    <% if (weekday){ %>
-        <h1 style="color:red">Its <%=nameDay%> today</h1>
-    <% } else { %>
-        <h1 style="color:green">Its <%=nameDay%> today</h1>
-    <% } %>
-</body>
-</html>
+<%- include("header") %> 
+    <div class="box" id="heading">
+        <h1><%= listTitle %> list</h1>
+        <% if (weekday){ %>
+            <h1 style="color:red">Its <%=nameDay%> today</h1>
+        <% } else { %>
+            <h1 style="color:green">Its <%=nameDay%> today</h1>
+        <% } %>
+        <p>А вообще сегодня <%=date%> </p>
+    </div>
+
+    <div class="box">
+        <% for(var i=0; i<addedTasks.length;i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p> <%= addedTasks[i] %> </p>
+            </div>
+        <% } %>
+        <form action="/" method="post">
+            <input type="text" name="newTask" autocomplete="off" placeholder="New Item">
+            <button type="submit" name="list" value=<%= listTitle %> >+</button>
+        </form>
+    </div>
+<%- include("footer") %> 
