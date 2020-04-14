@@ -1,0 +1,24 @@
+<%- include("header") %>
+
+<h1>Замовлення квітів</h1>
+<form action="/" method="post">
+    <label for="typeFlower">Які квіти</label>
+    <select id="typeFlower" name="typeFlower">
+        <option>Ромашки</option>
+        <option>Розы</option>
+        <option>Тюльпаны</option>
+        <option>Гвоздики</option>
+    </select>
+    <br>
+    <label for="boxing">Яке пакування</label>
+    <select id="boxing" name="boxing">
+        <option>Коробка</option>
+        <option>Фольга</option>
+        <option>Полиэтилен</option>
+    </select>
+    <br>
+    <input type="number" name="quant" placeholder="кількість квітів">
+<button type="submit">Оформити</button>
+</form>
+
+<%- include("footer") %>
