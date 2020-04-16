@@ -17,7 +17,15 @@ app.use(express.static("public"));
 
 
 app.get("/", (req, res)=>{
-  res.render("home");
+  res.render("home",{ startContent:homeStartingContent });
+})
+
+app.get("/about", (req, res)=>{
+  res.render("about",{ abContent:aboutContent });
+})
+
+app.get("/contact", (req, res)=>{
+  res.render("contact",{ contContent:contactContent });
 })
 
 
@@ -36,4 +44,6 @@ app.post("/",(req, res)=>{
 
 
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000, ()=>{
+  console.log("Server Started!");
+});
