@@ -15,14 +15,14 @@
             </div>
         <% } %>
         <% addedTasks.map((item) => { %>
-            <form action="/delete" method="post">
+            <form action="/delete/lists/<%=listTitle%>" method="post">
                 <div class="item">
                     <input type="checkbox" name="checkbox" value=<%=item._id%> onChange="this.form.submit()">
                     <p name="item"> <%= item.name %> </p>
                 </div>
             </form>
         <% }) %>
-        <form class="item" action="/" method="post">
+        <form class="item" action="/lists/<%=listTitle%>" method="post">
             <input type="text" name="newTask" autocomplete="off" placeholder="New Item">
             <button type="submit" name="list" value=<%= listTitle %> >+</button>
         </form>
