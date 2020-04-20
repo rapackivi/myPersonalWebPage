@@ -18,7 +18,10 @@ let [todayStr, day] = dateUtil.getDate();
 // ==================================== 
 //================DB================
 const itemSchema = mongoose.Schema({
-    name : String
+    name : {
+        type : String,
+        required : true
+    }
 })
 const ItemModel = mongoose.model("item", itemSchema)
 
