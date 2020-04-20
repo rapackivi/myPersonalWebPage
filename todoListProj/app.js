@@ -27,6 +27,12 @@ const itemSchema = mongoose.Schema({
 
 const itemModel = mongoose.model("item", itemSchema);
 
+const listSchema = mongoose.Schema({
+    name : String,
+    records : [itemSchema]
+})
+
+const listModel = mongoose.model("list", listSchema);
 
 
 app.get("/", (req, res)=>{
@@ -83,10 +89,10 @@ app.post("/lists/:param", (req,res)=>{
     res.redirect("/lists/"+listName) ;
 })
 
-app.get("/lists/:param", (req,res)=>{
+app.get("/:param", (req,res)=>{
     const listName = req.params.param;
     const ItemModel = mongoose.model(listName,itemSchema);
-    ItemModel.find({}, (err,result)=>{
+    listModel.find({}, (err,result)=>{
         if (!err){
             console.log("reading success");
             res.render("list_customList", { 
