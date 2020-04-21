@@ -20,12 +20,17 @@ let [todayStr, day] = dateUtil.getDate();
 const itemSchema = mongoose.Schema({
     name : {
         type : String,
-        reqired : true
+        required : true
     }
-});
-//===================================
+})
+const ItemModel = mongoose.model("item", itemSchema)
 
-const itemModel = mongoose.model("item", itemSchema);
+const listSchema = mongoose.Schema({
+    name : String,
+    items : [itemSchema]
+})
+const listModel = mongoose.model("list", listSchema);
+//===================================
 
 
 
@@ -64,38 +69,64 @@ app.post("/delete", (req,res)=>{
 
 
 
-app.post("/delete/lists/:param", (req,res)=>{
+app.post("/delete/:param", (req,res)=>{
     const id = req.body.checkbox;
+    
+    console.log(id);
     const listName = req.params.param;
-    const ItemModel = mongoose.model(listName,itemSchema);
-    ItemModel.findByIdAndDelete(id, (err)=> console.log(err||"successfuly deleted!"));
-    res.redirect("/lists/"+listName);
+    console.log(listName);
+    listModel.findOneAndUpdate({name:listName},
+        {$pull: {items: {_id:id}}},
+        (err, result)=>{
+            if(!err){
+                console.log("successed in deleting!");
+                result.save();
+                res.redirect("/"+listName);
+            }
+        });
 })
 
-app.post("/lists/:param", (req,res)=>{
+app.post("/:param", (req,res)=>{
     const listName = req.params.param;
     const nameNewItem = req.body.newTask;
-    const ItemModel = mongoose.model(listName,itemSchema);
     const newItem = new ItemModel({
         name : nameNewItem
     });
-    newItem.save();
-    res.redirect("/lists/"+listName) ;
+    listModel.findOne({name:listName}, (err, resultList)=>{
+        if (!err){
+            resultList.items.push(newItem);
+            resultList.save();
+            res.redirect("/" + listName);
+        } else {
+            console.log("vse ocheny ploho!")
+        }
+    })
+    
 })
 
-app.get("/lists/:param", (req,res)=>{
+app.get("/:param", (req,res)=>{
     const listName = req.params.param;
-    const ItemModel = mongoose.model(listName,itemSchema);
-    ItemModel.find({}, (err,result)=>{
+    listModel.findOne({name:listName}, (err,result)=>{
         if (!err){
-            console.log("reading success");
-            res.render("list_customList", { 
-                listTitle: listName,  
-                weekday: day%6 , 
-                date : todayStr, 
-                addedTasks : result })
+            if (result){
+                console.log("reading success");
+                console.log(result);
+                res.render("list_customList", { 
+                    listTitle: listName,  
+                    weekday: day%6 , 
+                    date : todayStr, 
+                    addedTasks : result.items })
+            }else{
+                listModel.create({name:listName,items:[]},(err)=> console.log(err||"success new list created"));
+                res.render("list_customList", { 
+                    listTitle: listName,  
+                    weekday: day%6 , 
+                    date : todayStr, 
+                    addedTasks : [] })   
+            }
+             
         } else {
-            console.error.apply(err.message)
+            console.log(err.message)
         }
     })  
 })
